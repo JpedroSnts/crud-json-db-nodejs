@@ -1,12 +1,12 @@
-const Model = require('../models/Model');
+const Product = require('../models/Product');
 const HtmlReader = require('../service/HtmlReader');
 
-class ModelController {
+class PagesController {
     static async index(req, res) {
-        const data = await Model.index();
+        const data = Product.read();
         res.writeHeader(200, { 'Content-Type': 'text/html' });
         res.write(await HtmlReader.index(data));
     }
 }
 
-module.exports = ModelController;
+module.exports = PagesController;

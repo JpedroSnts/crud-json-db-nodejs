@@ -8,7 +8,9 @@ class HttpServer {
 
     constructor() {
         this._server = http.createServer(async (request, response) => {
-            const url = request.url;
+            response.setHeader('Access-Control-Allow-Origin', '*');
+            response.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+            const [url] = request.url.split('?');
             const method = request.method;
             for (let index in this._routes) {
                 if (url == this._routes[index].route && method == this._routes[index].method) {
