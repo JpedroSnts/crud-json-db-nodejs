@@ -1,0 +1,12 @@
+{
+    "name": "crud-json-db-nodejs",
+    "version": "1.0.0",
+    "description": "CRUD made with node.js core modules and uses a .json file as data storage",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "keywords": [],
+    "author": "JpedroSnts",
+    "license": "MIT"
+}
