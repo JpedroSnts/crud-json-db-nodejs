@@ -1,0 +1,15 @@
+<div class="d-flex flex-wrap-reverse justify-content-center">
+    <img
+        class="rounded border p-2"
+        style="width: min(100%, 600px)"
+        src="{{{PRODUCT_IMAGE}}}"
+        alt="Image from {{{PRODUCT_NAME}}}"
+    />
+    <div class="px-4">
+        <h1>{{{PRODUCT_NAME}}}</h1>
+        <h3>$ {{{PRODUCT_PRICE}}}</h3>
+        <p>{{{PRODUCT_DESCRIPTION}}}</p>
+        <button class="btn btn-danger mb-2" id="btnDeleteProduct">Delete Product</button>
+        <a href="/update?id={{{PRODUCT_ID}}}" class="btn btn-warning mb-2">Edit Product</a>
+    </div>
+</div>
